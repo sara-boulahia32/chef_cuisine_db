@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chef_site_db</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+    <style>
+        .fontsinista{
+            font-family: Sansita Swashed;
+        }
+    </style>
+</head>
+<body>
+        
+<div class="flex justify-between items-center  bg-black px-8">
+    <a href="#">
+        <img src="img/cuisine_logo-removebg-preview.png" class="max-w-full h-auto w-[100px] " alt="logo">
+    </a>
+    <div class="block lg:hidden">
+  <button id="menu-button" class="text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+  </button>
+</div>
+    <div class="hidden fontsinista lg:flex space-x-8 leading-normal tracking-normal">
+        
+        <a href="index.php" class="font-bold text-white lg:text-lg p-2 hover:bg-gray-700">Menu</a>
+        <a href="activites.php" class="font-semibold text-white lg:text-lg p-2 hover:bg-gray-700">Book a table</a>
+        <a href="reservations.php" class="font-semibold text-white lg:text-lg p-2 hover:bg-gray-700">Reservations</a>
+        <a href="reservations.php" class="font-semibold text-white lg:text-lg p-2 hover:bg-gray-700">SHOP</a>
+        <a href="about.html" class="font-semibold text-white lg:text-lg p-2 hover:bg-gray-700">The Chef</a>
+        <a href="login.php" class="font-semibold text-white lg:text-lg p-2 hover:bg-gray-700">Contact</a>
+        
+        <div class="flex space-x-4 pt-2 text-white">
+            <a href="#" class="text-white w-[20px] h-[20px]">
+            <a href="client.php">
+            <img src="./img/User.png" alt="user logo"></a>
+        </a>
+        <!-- <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="#"><i class='bx bxl-pinterest'></i></a>
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+             -->
+        </div>
+  
+    </div>
+</div>
+
+
+
+<div id="menu" class="fixed top-0 left-0 h-screen w-[70%] bg-gray-800	  px-4 py-2 transform -translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex-col justify-center items-center space-y-4 z-50 hidden pt-[20%]">
+<div class="text-center space-y-8 pt-[30%] fontsinista">
+<div><a href="#" class="font-semibold text-white hover:text-[#F7E0A1]">Menu</a></div>
+  <div><a href="#" class="font-semibold text-white hover:text-[#F7E0A1]">Book a table</a></div>
+  <div><a href="#" class="font-semibold text-white hover:text-[#F7E0A1]">Reservations</a></div>
+  <div><a href="#" class="font-semibold text-white hover:text-[#F7E0A1]">SHOP</a></div>
+  <div><a href="about.html" class="font-semibold text-white hover:text-[#F7E0A1]">The Chef</a></div>
+  <div><a href="#" class="font-semibold text-white hover:text-[#F7E0A1]">Contact</a></div>
+</div>
+</div>
+    <main class="px-8 py-12 space-y-12 max-w-6xl mx-auto text-gray-800">
+        <!-- Our Company Section -->
+        <section class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8">
+          <img src="img/Chef+Daniel+Humm+chatting+with+guests+in+the+dining+room.jpeg" alt="Our Company Image"
+            class="w-full md:w-1/2 h-64 object-cover">
+          <div class="md:w-1/2 space-y-2">
+            <p class="text-sm font-semibold text-gray-800 fontsinista">MENU</p>
+            <h2 class="text-2xl font-bold  font-Mont text-gray-900"> WE DESIGN YOUR PLATE</h2>
+            <p class="font-Mont ">A progression of rare and beautiful ingredients where texture, flavour and harmony is paramount. Delve into the Quay dining experience with Peter Gilmore’s Menu and a thoughtfully curated Wine List.
+
+                Quay offers a six- and eight-course menu for lunch and dinner, and the ‘Quay to Lunch’ four-course menu on weekends only.</p>
+                <button class="text-black flex justify-start content-center mt-3 hover:text-black">
+                    <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
+                        READ MORE
+                    </a>
+                </button>
+          </div>
+        </section>
+    
+        <!-- Our Mission Section -->
+        <section class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8">
+          <div class="md:w-1/2 space-y-2">
+            <p class="text-sm font-semibold text-gray-800 fontsinista">OUR CHEF</p>
+            <h2 class="text-2xl font-bold text-gray-900">PETER GILMORE</h2>
+            <p class="font-Mont ">Peter’s appreciation of nature’s diversity and his endless experimentation in the kitchen and garden are the driving forces in his cooking. Peter leads the Quay team with a focus on excellence, innovation and hospitality.</p>
+              <button class="text-black flex justify-start content-center mt-3 hover:text-black">
+                <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
+                    READ MORE
+                </a>
+            </button>
+          </div>
+          <img src="img/CroppedFocusedImage160059050-50-GRR-PETRUS-OCTOBER-2024-FOOD-WINTER-AYNHOE-PARK-DEER4-kkz9e0-web-121224-1.png" alt="Our Mission Image"
+            class="w-full md:w-1/2 h-64 object-cover">
+        </section>
+    
+        <!-- Our Products Section -->
+        <section class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 font-Mont">
+          <img src="img/photo-groupe-chefs-cNathalie-Carnet-1.webp" alt="Our Products Image"
+            class="w-full md:w-1/2 h-64 object-cover">
+          <div class="md:w-1/2 space-y-2">
+            <p class="text-sm font-semibold text-gray-800  fontsinista">SPECIALITY</p>
+            <h2 class="text-2xl font-bold text-gray-900 font-Mont">Dust Off Your Bottles</h2>
+            <p class="font-Mont ">For a limited time, Quay is welcoming guests to bring along their best bottles to enjoy over weekend lunch. If you have a cellar full of wine, or even just ‘that’ bottle you’ve been desperate to dust off, there is no better way to enjoy it than in one of Australia’s most celebrated restaurants.</p>
+              <button class="text-black flex justify-start content-center mt-3 hover:text-black">
+                <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
+                    READ MORE
+                </a>
+            </button>
+          </div>
+        </section>
+    
+        <!-- Our Team Section -->
+        <section class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8">
+          <div class="md:w-1/2 space-y-2">
+            <p class="text-sm font-semibold text-gray-800 fontsinista">TEAMS WORK</p>
+            <h2 class="text-2xl font-bold text-gray-900">Events</h2>
+            <p class="font-Mont ">Celebrate at one of Australia’s most awarded restaurants, with panoramic views encompassing the Sydney Harbour Bridge and Sydney Opera House. From intimate dinner parties in the Private Dining Room, to long lunches in the spectacular Upper Tower, to large cocktail events in The Green Room – Quay delivers an immersive dining experience with views like no other.</p>
+              <button class="text-black flex justify-start content-center mt-3 hover:text-black">
+                <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
+                    READ MORE
+                </a>
+            </button>
+          </div>
+          <img src="img/Two+people+at+a+dining+table+with+glasses+of+wine,+serving+themselves+food+off+of+a+tabletop+grill..jpeg" alt="Our Team Image"
+            class="w-full md:w-1/2 h-64 object-cover">
+        </section>
+    
+      </main>
+</body>
+</html>
