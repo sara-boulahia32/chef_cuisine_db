@@ -1,4 +1,42 @@
-<!-- <?php include('db.php'); ?> -->
+<?php
+include 'db_config.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['email']) && isset($_POST['password'])) {
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $sql = "SELECT * FROM users WHERE email='$email'";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+
+            if ($password == $row['password']) { // Direct comparison for plain text password
+                session_start();
+                $_SESSION['user_id'] = $row['id'];
+                $_SESSION['user_role'] = $row['role'];
+
+                if ($row['role'] == 'admin') {
+                    header("Location: admin_dashboard.php");
+                } else {
+                    header("Location: user_dashboard.php");
+                }
+                exit();
+            } else {
+                echo "Invalid password.";
+            }
+        } else {
+            echo "No user found with that email.";
+        }
+    } else {
+        echo "Please enter both email and password.";
+    }
+
+    $conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,16 +52,16 @@
     <div class="h-28 bg-gray-800 text-white text-2xl font-semibold flex items-center justify-center rounded-t-lg">
       <span>Login Form</span>
     </div>
-    <form action="./index.php?action=register" class="p-6">
+    <form method="post" action="login.php" class="p-6">
       <div class="relative h-14 mb-4">
-      <input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>">
+     
         <i class="fas fa-user absolute top-0 left-0 w-14 h-full bg-black text-white text-xl flex items-center justify-center rounded-l-lg"></i>
-        <input type="text" placeholder="Email or Phone" required 
+        <input type="email" name="email" placeholder="Email or Phone" required 
                class="w-full h-full pl-16 border border-gray-300 rounded-r-lg text-lg focus:border-teal-600 focus:ring-teal-600 transition">
       </div>
       <div class="relative h-14 mb-4">
         <i class="fas fa-lock absolute top-0 left-0 w-14 h-full bg-black text-white text-xl flex items-center justify-center rounded-l-lg"></i>
-        <input type="password" placeholder="Password" required 
+        <input type="password" name="password" placeholder="Password" required 
                class="w-full h-full pl-16 border border-gray-300 rounded-r-lg text-lg focus:border-teal-600 focus:ring-teal-600 transition">
       </div>
       <div class="text-right mb-4">

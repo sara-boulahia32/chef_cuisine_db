@@ -1,3 +1,9 @@
+<?php session_start(); 
+if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] != 'admin') { 
+  header("Location: login.php"); exit(); } 
+  echo "Welcome to the Admin Dashboard!"; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +21,7 @@
             </a>
     <h1 class="text-2xl font-bold text-white"> Dashboard panel</h1></div>
     <div class="flex items-center">
-      <span class="mr-4 text-white">Hello, <strong>User Sara</strong></span>
+      <span class="mr-4 text-white">Hello, <strong>Chef Sara</strong></span>
       <img src="https://via.placeholder.com/40" alt="profile" class="rounded-full w-10 h-10">
     </div>
   </nav>
@@ -27,8 +33,13 @@
   <aside class="w-64 bg-gray-800">
       
       <nav class="mt-8">
-          <a href="index.php?view=dashboard" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Dashboard</a>
-          <a href="index.php?view=dashboard_newusers" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">New Users</a>
+          <a href="add_client.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Add Client</a>
+          <a href="remove_client.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Remove Client</a>
+          <a href="update_client.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Update Client</a>
+          <a href="approve_reservation.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Approve/Decline Reservation</a>
+          <a href="add_plate.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Add Plate to Menu</a>
+          <a href="modify_plate.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Modify Plate</a>
+          <a href="logout.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Logout</a>
       </nav>
   </aside>
   <main class="flex-1  overflow-y-auto">
@@ -37,7 +48,7 @@
     <div class="bg-white p-6 rounded-lg shadow-md mb-6 flex justify-between items-center">
       <div>
         <h2 class="text-3xl font-semibold text-gray-800">Welcome, Sara!</h2>
-        <p class="text-gray-600 mt-2">Here is the history of your reservations</p>
+        <p class="text-gray-600 mt-2">Here is the history of today's reservations</p>
       </div>
       <div>
         <img src="https://via.placeholder.com/120" alt="chef icon" class="w-32">
@@ -47,22 +58,28 @@
      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
       <div class="bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
         <div>
-          <h3 class="text-gray-600">Pending reservations</h3>
+          <h3 class="text-gray-600">Pending Requests</h3>
           <p class="text-2xl font-bold text-blue-500">12</p>
         </div>
         <i class="fas fa-clock text-4xl text-blue-400"></i>
       </div>
       <div class="bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
         <div>
-          <p class="text-gray-600">Approved reservations</p>
+          <p class="text-gray-600">Approved Today</p>
           <h3 class="text-2xl font-bold text-green-500">34</h3>
         </div>
         <i class="fas fa-check-circle text-4xl text-green-400"></i>
       </div>
-      
       <div class="bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
         <div>
-          <p class="text-gray-600">Total reservations</p>
+          <p class="text-gray-600">Approved Tomorrow</p>
+          <h3 class="text-2xl font-bold text-yellow-500">8</h3>
+        </div>
+        <i class="fas fa-calendar-day text-4xl text-yellow-400"></i>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
+        <div>
+          <p class="text-gray-600">Total Clients</p>
           <h3 class="text-2xl font-bold text-yellow-500">8</h3>
         </div>
         <i class="fas fa-calendar-day text-4xl text-yellow-400"></i>
@@ -140,8 +157,8 @@
                             <td class="py-2 px-4">6</td>
                             <td class="py-2 px-4 text-yellow-500">Pending</td>
                             <td class="border-b p-3">
-              <button class="text-green-500 hover:underline">Edit</button> | 
-              <button class="text-red-500 hover:underline">Cancel</button>
+              <button class="text-green-500 hover:underline">Accept</button> | 
+              <button class="text-red-500 hover:underline">Refuse</button>
             </td>
                         </tr>                    </tbody>
                 </table>
@@ -172,26 +189,40 @@
 
         <!-- Add Menu Section -->
         <section class="mb-8">
-            <button id="open-menu-form" class="bg-orange-950 text-white px-4 py-2 rounded-md">Add reservation</button>
+            <button id="open-menu-form" class="bg-orange-950 text-white px-4 py-2 rounded-md">Add Menu</button>
             <div id="menu-form-container" class="mt-4 hidden">
                 <div class="max-w-lg mx-auto bg-white rounded-lg shadow-md overflow-hidden">
                     <div class="p-4">
-                        <h2 class="text-xl font-bold mb-4">New Reservation</h2>
+                        <h2 class="text-xl font-bold mb-4">New Menu</h2>
                         <form id="menu-form" action="" method="POST">
                             <div class="mb-4">
                                 <label for="menu-name" class="block text-sm font-bold mb-2">Menu Name</label>
                                 <input type="text" id="menu-name" name="menu-name" class="w-full px-3 py-2 border rounded-md" required>
                             </div>
                             <div class="mb-4">
-                                <label for="menu-name" class="block text-sm font-bold mb-2"> Guests number:</label>
-                                <input type="number" name="guest-number" class="w-full px-3 py-2 border rounded-md" required>
+                                <label for="menu-price" class="block text-sm font-bold mb-2">Price</label>
+                                <input type="number" step="0.01" id="menu-price" name="menu-price" class="w-full px-3 py-2 border rounded-md" required>
                             </div>
-                            
-                            <button class="text-black flex justify-start content-center mt-3 hover:text-black">
-                    <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        Save reservation
-                    </a>
-                </button>
+                            <div class="mb-4">
+                                <label for="menu-description" class="block text-sm font-bold mb-2">Description</label>
+                                <textarea id="menu-description" name="menu-description" class="w-full px-3 py-2 border rounded-md" required></textarea>
+                            </div>
+
+                            <!-- Dishes Section -->
+                            <div id="dishes-section">
+                                <h3 class="text-lg font-bold mb-2">Dishes</h3>
+                                <div class="dish-field mb-4">
+                                    <label for="dish-name-1" class="block text-sm font-bold mb-2">Dish Name</label>
+                                    <input type="text" id="dish-name-1" name="dish-name[]" class="w-full px-3 py-2 border rounded-md mb-2" required>
+                                    <label for="dish-image-1" class="block text-sm font-bold mb-2">Dish Image URL</label>
+                                    <input type="text" id="dish-image-1" name="dish-image[]" class="w-full px-3 py-2 border rounded-md mb-2" required>
+                                    <button type="button" class="remove-dish bg-red-500 text-white px-2 py-1 rounded-md">Remove</button>
+                                </div>
+                            </div>
+
+                            <button type="button" id="add-dish" class="bg-blue-500 text-white px-4 py-2 rounded-md mb-4">Add Dish</button>
+
+                            <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md">Save Menu</button>
                         </form>
                     </div>
                 </div>

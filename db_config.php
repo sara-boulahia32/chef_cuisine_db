@@ -6,7 +6,8 @@ $database='chef_site_db';
 
 $conn = mysqli_connect($host, $user, $password, $database);
 
-if (!$conn){
-    die("Connexion échouée: " . mysqli_connect_error());
+if ($conn->connect_error){
+    die("Connexion failed: " . $conn->connect_error);
 }
-echo "Connexion réussie à la base de données.";
+// echo "Connected successfully.";
+?>

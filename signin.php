@@ -1,4 +1,17 @@
-<!-- <?php include('db.php'); ?> -->
+<?php include 'db_config.php'; 
+if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+  $name = $_POST['name']; 
+  $email = $_POST['email']; 
+  $password = password_hash($_POST['password'], PASSWORD_DEFAULT); 
+  $role = 'client'; 
+  $sql = "INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$password', '$role')"; 
+  if ($conn->query($sql) === TRUE) { 
+    echo "Signup successful. You can now <a href='login.php'>login</a>."; } 
+ else { 
+  echo "Error: " . $sql . "<br>" . $conn->error; } $conn->close(); }?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,33 +27,39 @@
     <div class="h-28 bg-gray-800 text-white text-2xl font-semibold flex items-center justify-center rounded-t-lg">
       <span>SIGN UP Form</span>
     </div>
-    <form action="./index.php?action=login" class="p-6">
+    <form method="post" action="signin.php" class="p-6">
       <div class="relative h-14 mb-4">
-      <input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>">
+      <!-- <label for="name">Name:</label> -->
 
         <i class="fas fa-user absolute top-0 left-0 w-14 h-full bg-black text-white text-xl flex items-center justify-center rounded-l-lg"></i>
-        <input type="text" placeholder="Email or Phone" required 
-               class="w-full h-full pl-16 border border-gray-300 rounded-r-lg text-lg focus:border-teal-600 focus:ring-teal-600 transition">
+        <input type="text" id="name" name="name" placeholder="Name.." required 
+               class="w-full h-full pl-16 border border-gray-300 rounded-r-lg text-lg focus:border-black focus:ring-black transition">
       </div>
       <div class="relative h-14 mb-4">
-        <i class="fas fa-lock absolute top-0 left-0 w-14 h-full bg-black text-white text-xl flex items-center justify-center rounded-l-lg"></i>
-        <input type="password" placeholder="Create password" required 
-               class="w-full h-full pl-16 border border-gray-300 rounded-r-lg text-lg focus:border-teal-600 focus:ring-teal-600 transition">
+      <!-- <label for="email">Email:</label> -->
+
+        <i class="fas fa-user absolute top-0 left-0 w-14 h-full bg-black text-white text-xl flex items-center justify-center rounded-l-lg"></i>
+        <input type="email" id="email" name="email" placeholder="Email or Phone" required 
+               class="w-full h-full pl-16 border border-gray-300 rounded-r-lg text-lg focus:border-black focus:ring-black transition">
       </div>
       <div class="relative h-14 mb-4">
+      <!-- <label for="password">Password:</label> -->
         <i class="fas fa-lock absolute top-0 left-0 w-14 h-full bg-black text-white text-xl flex items-center justify-center rounded-l-lg"></i>
-        <input type="password" placeholder="Confirm password" required 
-               class="w-full h-full pl-16 border border-gray-300 rounded-r-lg text-lg focus:border-teal-600 focus:ring-teal-600 transition">
+        <input type="password" id="password" name="password" placeholder="Create password" required 
+               class="w-full h-full pl-16 border border-gray-300 rounded-r-lg text-lg focus:border-black focus:ring-black transition">
       </div>
-      <!-- <div class="text-right mb-4">
-        <a href="#" class="text-black text-sm hover:underline">Forgot password?</a>
-      </div> -->
+      <div class="relative h-14 mb-4">
+      <!-- <label for="confirmpassword">Email:</label> -->
+        <i class="fas fa-lock absolute top-0 left-0 w-14 h-full bg-black text-white text-xl flex items-center justify-center rounded-l-lg"></i>
+        <input type="password" id="confirmpassword" placeholder="Confirm password" required 
+               class="w-full h-full pl-16 border border-gray-300 rounded-r-lg text-lg focus:border-black focus:ring-black transition">
+      </div>
       <div>
-        <input type="submit" value="Signup" 
+        <input type="submit" value="Signin" 
                class="w-full h-14 bg-gray-800 text-white text-lg font-medium rounded-lg cursor-pointer hover:bg-white transition">
       </div>
       <div class="text-center mt-6 text-sm">
-        Already have an account? <a href="signin.php" class="text-gray-800 hover:underline">Login</a>
+        Already have an account? <a href="login.php" class="text-gray-800 hover:underline">Login</a>
       </div>
     </form>
   </div>
