@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
 
-            if ($password == $row['password']) { // Direct comparison for plain text password
+            if (password_verify($password, $row['password'])) { 
                 session_start();
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['user_role'] = $row['role'];
