@@ -3,6 +3,9 @@ document.getElementById('open-menu-form').addEventListener('click', function() {
     formContainer.classList.toggle('hidden');
 });
 
+
+
+
 let dishCount = 1;
 
 document.getElementById('add-dish').addEventListener('click', function(){

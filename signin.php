@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex items-center justify-center min-h-screen  p-4 overflow-hidden">
+<body class="flex flex-col items-center justify-center min-h-screen  p-4 overflow-hidden">
   <div class="max-w-md w-full bg-white rounded-lg shadow-md">
     <div class="h-28 bg-gray-800 text-white text-2xl font-semibold flex items-center justify-center rounded-t-lg">
       <span>SIGN UP Form</span>

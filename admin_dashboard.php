@@ -1,7 +1,7 @@
 <?php session_start(); 
 if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] != 'admin') { 
   header("Location: login.php"); exit(); } 
-  echo "Welcome to the Admin Dashboard!"; 
+  // echo "Welcome to the Admin Dashboard!"; 
 ?>
 
 <!DOCTYPE html>
@@ -33,12 +33,13 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] != 'admin') {
   <aside class="w-64 bg-gray-800">
       
       <nav class="mt-8">
-          <a href="add_client.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Add Client</a>
-          <a href="remove_client.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Remove Client</a>
-          <a href="update_client.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Update Client</a>
+          <a href="view_clients.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">View Clients</a>
+          <a href="edit_client.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Edit Client</a>
+          <a href="delete_client.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Remove Client</a>
           <a href="approve_reservation.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Approve/Decline Reservation</a>
           <a href="add_plate.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Add Plate to Menu</a>
           <a href="modify_plate.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Modify Plate</a>
+          <a href="delete_plate.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Delete Plate</a>
           <a href="logout.php" class="block py-2 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">Logout</a>
       </nav>
   </aside>

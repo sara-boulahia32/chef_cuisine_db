@@ -24,13 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
                 exit();
             } else {
-                echo "Invalid password.";
+                echo "Invalid password." . "<br>";
             }
         } else {
-            echo "No user found with that email.";
+            echo "No user found with that email." . "<br>";
         }
     } else {
-        echo "Please enter both email and password.";
+        echo "Please enter both email and password." . "<br>";
     }
 
     $conn->close();
@@ -42,12 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Login Form Tailwind CSS</title>
+  <title>Login Form</title>
   <!-- Font Awesome CDN link for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex items-center justify-center min-h-screen  p-4 overflow-hidden">
+<body class="flex flex-col items-center justify-center min-h-screen  p-4 overflow-hidden">
   <div class="max-w-md w-full bg-white rounded-lg shadow-md">
     <div class="h-28 bg-gray-800 text-white text-2xl font-semibold flex items-center justify-center rounded-t-lg">
       <span>Login Form</span>

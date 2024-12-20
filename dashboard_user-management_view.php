@@ -116,9 +116,7 @@
       </div>
   </div>
   
-  <script type="module" src="./dist/dashboard_users.js"></script>
+  <script type="module" src="popup.js"></script>
 
-
-<script type="module" src="./dist/dashboard_stats.js"></script>
 </body>
 </html>
