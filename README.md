@@ -141,7 +141,7 @@ Navigateur web moderne.
 
 Clonez le repository depuis GitHub :
 
-git clone https://github.com/your-repo
+git clone [https://github.com/your-repo](https://github.com/sara-boulahia32/chef_cuisine_db)
 
 Importez le fichier database.sql dans votre gestionnaire de base de données (ex. phpMyAdmin).
 
@@ -149,10 +149,9 @@ Configurez le fichier config.php pour la connexion à la base de données.
 
 Lancez le projet en plaçant les fichiers dans le dossier racine du serveur local.
 
-Accédez au site via http://localhost/Projet-Chef-Cuisinier/.
 
 ## Créateurs
 
 Abdeladim ABID
 
-Pour toute question ou suggestion, veuillez me contacter via : email@example.com
+Pour toute question ou suggestion, veuillez me contacter via : saraboulahia32@example.com
