@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="flex flex-col items-center justify-center min-h-screen  p-4 overflow-hidden">
   <div class="max-w-md w-full bg-white rounded-lg shadow-md">
     <div class="h-28 bg-gray-800 text-white text-2xl font-semibold flex items-center justify-center rounded-t-lg">
-      <span>SIGN UP Form</span>
+      <span>Signin form</span>
     </div>
     <form method="post" action="signin.php" class="p-6">
       <div class="relative h-14 mb-4">
@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
       <div>
         <input type="submit" value="Signin" 
-               class="w-full h-14 bg-gray-800 text-white text-lg font-medium rounded-lg cursor-pointer hover:bg-white transition">
+               class="w-full h-14 bg-gray-800 text-white text-lg font-medium rounded-lg cursor-pointer hover:bg-white transition hover:text-black hover:border-2 hover:border-black">
       </div>
       <div class="text-center mt-6 text-sm">
         Already have an account? <a href="login.php" class="text-gray-800 hover:underline">Login</a>

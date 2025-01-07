@@ -1,5 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] != 'client') {
+    header("Location: login.php");
+    exit();
+}
+?>
 
-<!-- <?php include('db.php'); ?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,7 +80,7 @@
       
     <section class="bg-white lg:px-40 mt-10">
     <div class="mt-5 text-center lg:flex "> <a href="#"
-            class="px-3 md:py-1 mb-2 mx-auto font-semibold text-4xl ">Asiatic menu</a>
+            class="fontsinista px-3 md:py-1 mb-2 mx-auto font-semibold text-4xl ">Asiatic menu</a>
     </div>
     <div class=" w-full lg:hidden ">
         <div>
@@ -96,9 +103,9 @@
                         <div class="flex justify-between text-center font-semibold mx-4">
                             <p class="">Chicken dumplings</p>
                             <p>183.5$ </p>
-                            <button class="text-black flex justify-start content-center mt-3 hover:text-black">
-                    <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                            <button class="text-black flex justify-start content-center mt-3 hover:text-black mx-4">
+                    <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center mx-4">
+                        BOOK NOW
                     </a>
                 </button>
                     </button>
@@ -111,7 +118,7 @@
                             <p>39.5$ </p>
                             <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
                         </div>
@@ -124,7 +131,7 @@
                         </div>
                         <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -151,7 +158,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -166,7 +173,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -181,7 +188,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -196,7 +203,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -235,7 +242,7 @@
                             <p>183.5$ </p>
                             <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
                         </div>
@@ -247,7 +254,7 @@
                             <p>39.5$ </p>
                             <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
                         </div>
@@ -260,7 +267,7 @@
                         </div>
                         <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -287,7 +294,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -302,7 +309,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -317,7 +324,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -332,7 +339,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -371,7 +378,7 @@
                             <p>183.5$ </p>
                             <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
                         </div>
@@ -383,7 +390,7 @@
                             <p>39.5$ </p>
                             <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
                         </div>
@@ -396,7 +403,7 @@
                         </div>
                         <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -423,7 +430,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -438,7 +445,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -453,7 +460,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -468,7 +475,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -507,7 +514,7 @@
                             <p>183.5$ </p>
                             <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
                     </button>
@@ -520,7 +527,7 @@
                             <p>39.5$ </p>
                             <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
                         </div>
@@ -533,7 +540,7 @@
                         </div>
                         <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -560,7 +567,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -575,7 +582,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -590,7 +597,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 
@@ -605,7 +612,7 @@
                 </div>
                 <button class="text-black flex justify-start content-center mt-3 hover:text-black">
                     <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
-                        RESERVER
+                        BOOK NOW
                     </a>
                 </button>
 

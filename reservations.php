@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <h2>Make a Reservation</h2>
-    <form method="post" action="make_reservation.php">
+    <form method="post" action="reservations.php">
         <label for="menu_id">Menu:</label>
         <select id="menu_id" name="menu_id" required>
             <?php

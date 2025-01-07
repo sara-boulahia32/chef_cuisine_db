@@ -47,7 +47,7 @@
                 
                 <div class="flex space-x-4 pt-2 text-white">
                     <a href="#" class="text-white w-[20px] h-[20px]">
-                    <a href="client.php">
+                    <a href="login.php">
                     <img src="./img/User.png" alt="user logo"></a>
                 </a>
                 <!-- <a href="#"><i class='bx bxl-facebook-circle'></i></a>
@@ -145,79 +145,103 @@
     </div>
     
 
-    <main class="container mx-auto px-6 ">
+    <main class="container mx-auto px-6 py-16">
+        
         
 
         <section class="mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 uppercase mb-4 text-center">About Us</h2>
+            <h2 class="text-3xl font-bold fontsinista text-gray-800 uppercase mb-4 text-center">About Us</h2>
             <p class="text-xl text-gray-600 text-center mb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
             <div class="flex flex-wrap justify-center">
                 <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white p-6 rounded shadow-md">
-                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Traditional & Modern</h3>
+                        <img src="img/CroppedFocusedImage160059050-50-GRR-BSK-STPAULS-NOVEMBER-2022-INTERIOR-CHRISTMAS2-sxyzmo-web-171224.png" class="h-[250px] w-[500px]" alt="">
+                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Évasion Tropicale
+                        </h3>
                         <p class="text-gray-600">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                        <a href="#" class="inline-block mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">En savoir plus</a>
+                        <button class="text-black flex justify-start content-center mt-3 hover:text-black">
+                    <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
+                        READ MORE
+                    </a>
+                </button>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white p-6 rounded shadow-md">
-                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Healthy Food</h3>
+                    <img src="img/Pie.webp" class="h-[250px] w-[500px]" alt="">
+                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Soleil et Sérénité</h3>
                         <p class="text-gray-600">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                        <a href="#" class="inline-block mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">En savoir plus</a>
+                        <button class="text-black flex justify-start content-center mt-3 hover:text-black">
+                    <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
+                        READ MORE
+                    </a>
+                </button>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white p-6 rounded shadow-md">
-                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Our Special</h3>
+                    <img src="img/Shawarma_meatloaf_with_caramelised_onions_1000x.webp" class="h-[250px] w-[500px]" alt="">
+                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Aventure en Montagne</h3>
                         <p class="text-gray-600">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                        <a href="#" class="inline-block mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">En savoir plus</a>
+                        <button class="text-black flex justify-start content-center mt-3 hover:text-black">
+                    <a href="#" class="bg-white border border-black  w-32 h-10 flex items-center justify-center">
+                        READ MORE
+                    </a>
+                </button>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 uppercase mb-4">Our Menu</h2>
+            <h2 class="text-3xl font-bold text-gray-800 fontsinista uppercase mb-4">Our activities</h2>
             <div class="flex flex-wrap justify-center">
                 <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white p-6 rounded shadow-md">
-                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Fines Tartare Steak</h3>
-                        <p class="text-gray-600">$50</p>
-                        <a href="#" class="inline-block mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Commander</a>
+                        <img src="img/advocaat_2_1000x.webp" class="h-[250px] w-[500px]" alt="">
+                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Voyage Mystique</h3>
+                        <p class="text-gray-600">$589.98</p>
+                        <a href="#" class="inline-block mt-4 bg-white  py-2 px-4   bg-white border border-black">MORE</a>
+                        
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white p-6 rounded shadow-md">
-                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Creamy Chicken Soup</h3>
-                        <p class="text-gray-600">$40</p>
-                        <a href="#" class="inline-block mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Commander</a>
+                        <img src="img/Biscuits.webp" class="h-[250px] w-[500px]" alt="">
+                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Nuit sous les Étoiles</h3>
+                        <p class="text-gray-600">$409.98</p>
+                        <a href="#" class="inline-block mt-4 bg-white border border-black  py-2 px-4  ">MORE</a>
+                    </div>
+                    
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div class="bg-white p-6 rounded shadow-md">
+                        <img src="img/Butternut_squash_carbonara_with_crisp_garlic_1000x.webp" class="h-[250px] w-[500px]" alt="">
+                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Voyage au Cœur du Désert</h3>
+                        <p class="text-gray-600">$109.98</p>
+                        <a href="#" class="inline-block mt-4 bg-white border border-black py-2 px-4 rounded ">MORE</a>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white p-6 rounded shadow-md">
-                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Boiled Eggs on Toast</h3>
-                        <p class="text-gray-600">$10</p>
-                        <a href="#" class="inline-block mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Commander</a>
+                        <img src="img/Fresh_turmeric_and_peppercorn_curry_with_prawns_and_asparagus_1000x.webp" class="h-[250px] w-[500px]" alt="">
+                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Escapade Gourmande</h3>
+                        <p class="text-gray-600">$309.98</p>
+                        <a href="#" class="inline-block mt-4 bg-white border border-black py-2 px-4 rounded ">MORE</a>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white p-6 rounded shadow-md">
-                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Best Roasted Rumsteak</h3>
-                        <p class="text-gray-600">$30</p>
-                        <a href="#" class="inline-block mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Commander</a>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-                    <div class="bg-white p-6 rounded shadow-md">
-                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Risotto & Mushrooms</h3>
-                        <p class="text-gray-600">$20</p>
-                        <a href="#" class="inline-block mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Commander</a>
+                        <img src="img/Two+people+at+a+dining+table+with+glasses+of+wine,+serving+themselves+food+off+of+a+tabletop+grill..jpeg" class="h-[250px] w-[500px]" alt="">
+                        <h3 class="text-xl font-bold text-gray-800 uppercase mb-2">Rando Sauvage</h3>
+                        <p class="text-gray-600">$29.98</p>
+                        <a href="#" class="inline-block mt-4 bg-white border border-black py-2 px-4 rounded ">MORE</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
+<img src="img/SB-BANNER-281024.png" alt="">
     <footer class="relative bg-customCream">
         <div class="absolute inset-0 bg-cover bg-center " style="background-image: url('image/__.jpeg');">
             <div class="absolute inset-0 backdrop-blur-sm bg-black bg-opacity-30"></div>

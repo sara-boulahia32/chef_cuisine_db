@@ -101,7 +101,6 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
             <th class="py-2 px-4 text-left">Name</th>
             <th class="py-2 px-4 text-left">Description</th>
             <th class="py-2 px-4 text-left">Price</th>
-            <th class="py-2 px-4 text-left">Menu ID</th>
             <th class="py-2 px-4 text-left">Actions</th>
         </tr>
         </thead>
@@ -116,12 +115,9 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
                 echo '<td class="py-2 px-4">' . $row['price'] . "</td>";
                 // echo "<td>" . $row['menu_id'] . "</td>";
                 echo '<td class="py-2 px-4"><button id="submitEdituser" type="submit" class="text-black flex justify-start content-center mt-3 hover:text-black">
-                <a class="text-green-500 hover:underline" href="edit_client.php?id=' . $row['id'] . '">Edit</a> | 
+           
                 <a  class="text-red-500 hover:underline" href="delete_plate.php?id=' . $row['id'] . '">Delete</a>
-                <button id="deleteUserForm" value="'.$row['id'].'" 
-    class="text-black flex justify-start content-center mt-3 hover:text-black bg-white border border-black w-32 h-10 flex items-center justify-center">
-    Add Plate
-</button>
+                
 
                 </td>';
                 echo "</tr>";
